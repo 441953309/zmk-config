@@ -199,19 +199,19 @@ name: name##_macro {                \
          //   |--------+-------+-------+-------+-------+-------|                         |-------+-------+-------+-------+-------+---------|
          //   |        |CLICK_1|CLICK_2|CLICK_3|BT_PRV | BT_NXT|                         |RGBSAT-|RGBSAT+|       |CLICK_1| UP    |CLICK_2  |
          //   |--------+-------+-------+-------+-------+-------|                         |-------+-------+-------+-------+-------+---------|
-         //   |BT_CLR  |BT_0   |BT_1   |BT_2   |BT_3   |BT_4   |                         |RGBHUE-|RGBHUE+| RESET | LEFT  | DOWN  | RIGHT   |
+         //   |BT_CLR  |BT_0   |BT_1   |BT_2   |BT_3   |BT_4   |                         |RGBHUE-|RGBHUE+|       | LEFT  | DOWN  | RIGHT   |
          //   '---------------------------------------------------------|       |----------------------------------------------------------'
          //                            |EP_OFF  | EP_ON|         EP_TOG |       |RGBANI- |RGBANI+|   RGBTOG      |
          //                            '--------------------------------'       '--------------------------------'
          // label = "MOUSE";
          // XXX XXX XXX &out OUT_USB &out OUT_BLE  &out OUT_TOG                                  &mwh SCROLL_HOR(-15) &mwh SCROLL_VERT(-15) &mwh SCROLL_VERT(15) &mwh SCROLL_HOR(15)  &mwh SCROLL_DOWN  &mwh SCROLL_UP
          // XXX &mkp LCLK &mkp RCLK &mkp MCLK &bt BT_PRV &bt BT_NXT                              &rgb_ug RGB_SAD    &rgb_ug RGB_SAI   XXX  XXX  &mmv MOVE_VERT(-2500)  XXX
-         // &bt BT_CLR   &bt BT(0) &bt BT(1) &bt BT(2) &bt BT(3) &bt BT(4)                       &rgb_ug RGB_HUD    &rgb_ug RGB_HUI  &reset  &mmv MOVE_HOR(-2500) &mmv MOVE_VERT(2500) &mmv MOVE_HOR(2500)
+         // &bt BT_CLR   &bt BT(0) &bt BT(1) &bt BT(2) &bt BT(3) &bt BT(4)                       &rgb_ug RGB_HUD    &rgb_ug RGB_HUI   XXX  &mmv MOVE_HOR(-2500) &mmv MOVE_VERT(2500) &mmv MOVE_HOR(2500)
          //                         &ext_power EP_OFF    &ext_power EP_ON   &ext_power EP_TOG    &rgb_ug RGB_EFR    &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
          bindings = <
             XXX XXX XXX &out OUT_USB &out OUT_BLE  &out OUT_TOG                                  &rgb_ug RGB_BRD    &rgb_ug RGB_BRI   XXX  XXX  XXX  XXX
             XXX XXX XXX &bt BT_CLR &bt BT_PRV &bt BT_NXT                                         &rgb_ug RGB_SAD    &rgb_ug RGB_SAI   XXX  XXX  XXX  XXX
-            &bt BT_CLR   &bt BT(0) &bt BT(1) &bt BT(2) &bt BT(3) &bt BT(4)                       &rgb_ug RGB_HUD    &rgb_ug RGB_HUI  &reset  XXX  XXX  XXX
+            &bt BT_CLR   &bt BT(0) &bt BT(1) &bt BT(2) &bt BT(3) &bt BT(4)                       &rgb_ug RGB_HUD    &rgb_ug RGB_HUI   XXX  XXX  XXX  XXX
                                     &ext_power EP_OFF    &ext_power EP_ON   &ext_power EP_TOG    &rgb_ug RGB_EFR    &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
                                  >;
                          };
@@ -224,19 +224,19 @@ name: name##_macro {                \
          //   |--------+-------+-------+-------+-------+-------|                         |-------+-------+-------+-------+-------+---------|
          //   |        |CLICK_1|CLICK_2|CLICK_3|BT_PRV | BT_NXT|                         |       |       |       |CLICK_1| UP    |CLICK_2  |
          //   |--------+-------+-------+-------+-------+-------|                         |-------+-------+-------+-------+-------+---------|
-         //   |BT_CLR  |BT_0   |BT_1   |BT_2   |BT_3   |BT_4   |                         |       |       | RESET | LEFT  | DOWN  | RIGHT   |
+         //   |BT_CLR  |BT_0   |BT_1   |BT_2   |BT_3   |BT_4   |                         |       |       |       | LEFT  | DOWN  | RIGHT   |
          //   '---------------------------------------------------------|       |----------------------------------------------------------'
          //                            |EP_OFF  | EP_ON|         EP_TOG |       |       |        |               |
          //                            '--------------------------------'       '--------------------------------'
          // label = "MOUSE";
          // XXX XXX XXX &out OUT_USB &out OUT_BLE  &out OUT_TOG                                  &mwh SCROLL_HOR(-15) &mwh SCROLL_VERT(-15) &mwh SCROLL_VERT(15) &mwh SCROLL_HOR(15)  &mwh SCROLL_DOWN  &mwh SCROLL_UP
          // XXX &mkp LCLK &mkp RCLK &mkp MCLK &bt BT_PRV &bt BT_NXT                              XXX  XXX XXX    XXX                  &mmv MOVE_VERT(-2500)   XXX
-         // &bt BT_CLR   &bt BT(0) &bt BT(1) &bt BT(2) &bt BT(3) &bt BT(4)                       XXX  XXX &reset &mmv MOVE_HOR(-2500) &mmv MOVE_VERT(2500) &mmv MOVE_HOR(2500)
+         // &bt BT_CLR   &bt BT(0) &bt BT(1) &bt BT(2) &bt BT(3) &bt BT(4)                       XXX  XXX XXX    &mmv MOVE_HOR(-2500) &mmv MOVE_VERT(2500) &mmv MOVE_HOR(2500)
          //                         &ext_power EP_OFF    &ext_power EP_ON   &ext_power EP_TOG    XXX  XXX  XXX
          bindings = <
             XXX XXX XXX &out OUT_USB &out OUT_BLE  &out OUT_TOG                                  XXX  XXX XXX XXX  XXX XXX
             XXX XXX XXX XXX &bt BT_PRV &bt BT_NXT                                                XXX  XXX XXX XXX  XXX XXX
-            &bt BT_CLR   &bt BT(0) &bt BT(1) &bt BT(2) &bt BT(3) &bt BT(4)                       XXX  XXX &reset XXX  XXX XXX
+            &bt BT_CLR   &bt BT(0) &bt BT(1) &bt BT(2) &bt BT(3) &bt BT(4)                       XXX  XXX XXX XXX  XXX XXX
                                     &ext_power EP_OFF    &ext_power EP_ON   &ext_power EP_TOG    XXX  XXX  XXX
                                  >;
                          };
