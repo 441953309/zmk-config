@@ -245,9 +245,3 @@ name: name##_macro {                \
    };
 };
 // }}}
-// ### niceview {{{
-&nice_view_spi {
-    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
-};
-// }}}
-// vim: fdm=marker:
