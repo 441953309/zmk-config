@@ -55,7 +55,7 @@
             >;
         };
 
-        lower_layer {
+        l1_layer {
             // -----------------------------------------------------------------------------------------
             // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // |   `  |  !  |  @  |  #  |  $  |  %  |   |  -  |  =  |  [  |  ]  |  \  |      |
@@ -69,7 +69,21 @@
             >;
         };
 
-        raise_layer {
+        l2_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // |   `  |  !  |  @  |  #  |  $  |  %  |   |  -  |  =  |  [  |  ]  |  \  |      |
+            // |   ~  |  ^  |  &  |  *  |  (  |  )  |   |  _  |  +  |  {  |  }  |  |  |  GUI |
+            //                    | CTRL|     | SPC |   | ENT |     | ALT |
+            bindings = <
+                &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+                &kp GRAVE &kp EXCL  &kp AT   &kp HASH &kp DLLR  &kp PRCNT    &kp MINUS  &kp EQUAL &kp LBKT  &kp RBKT  &kp NUBS  &trans
+                &kp TILDE &kp CARET &kp AMPS &kp STAR &kp LPAR  &kp RPAR     &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE2 &kp LGUI
+                                            &kp LCTRL &trans    &kp SPACE    &kp RET    &trans    &kp LALT
+            >;
+        };
+
+        l3_layer {
             // -----------------------------------------------------------------------------------------
             // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // |   `  |  !  |  @  |  #  |  $  |  %  |   |  -  |  =  |  [  |  ]  |  \  |      |
