@@ -15,12 +15,6 @@
 // Overwrite number of leds on the keyboard. A Corne has 27 per side.
 &led_strip { chain-length = <27>; };
 
-// Overwrite the display cs pin
-// This have to be comment out for the right side.
-// &nice_view_spi {
-//   cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
-// };
-
 / {
     behaviors {
         mth: my_tolayer_hold {
@@ -49,43 +43,43 @@
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+            // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | 3&TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  GUI |
+            //                    | CTRL|  1  | SPC |   | ENT |  2   | ALT |
             bindings = <
-                &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                                &mt LCTRL LGUI &mth LSHFT 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                &kp ESC    &kp Q   &kp W   &kp E   &kp R   &kp T      &kp Y   &kp U  &kp I     &kp O   &kp P    &kp BSPC
+                &lt 3 TAB  &kp A   &kp S   &kp D   &kp F   &kp G      &kp H   &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+                &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B      &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &kp LGUI
+                                        &kp LCTRL  &mo 1   &kp SPACE  &kp RET &mo 2  &kp LALT
             >;
         };
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI | DFL | SPC |   | ENT |     | ALT |
+            // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // |   `  |  !  |  @  |  #  |  $  |  %  |   |  -  |  =  |  [  |  ]  |  \  |      |
+            // |   ~  |  ^  |  &  |  *  |  (  |  )  |   |  _  |  +  |  {  |  }  |  |  |  GUI |
+            //                    | CTRL|     | SPC |   | ENT |     | ALT |
             bindings = <
-                &kp TAB    &kp N1   &kp N2  &kp N3  &kp N4  &kp N5  &kp N6   &kp N7   &kp N8     &kp N9    &kp N0 &kp BSPC
-                &trans     &trans   &trans  &trans  &trans  &trans  &kp LEFT &kp DOWN &kp UP     &kp RIGHT &trans &trans
-                &kp LSHFT  &trans   &trans  &trans  &trans  &trans  &trans   &trans   &trans     &trans    &trans &trans
-                                        &mt LCTRL LGUI  &to 0   &kp SPACE    &kp RET  &mll 2 0   &kp RALT
+                &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+                &kp GRAVE &kp EXCL  &kp AT   &kp HASH &kp DLLR  &kp PRCNT    &kp MINUS  &kp EQUAL &kp LBKT  &kp RBKT  &kp NUBS  &trans
+                &kp TILDE &kp CARET &kp AMPS &kp STAR &kp LPAR  &kp RPAR     &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE2 &kp LGUI
+                                            &kp LCTRL &trans    &kp SPACE    &kp RET    &trans    &kp LALT
             >;
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  ~   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // |   `  |  !  |  @  |  #  |  $  |  %  |   |  -  |  =  |  [  |  ]  |  \  |      |
+            // |   ~  |  ^  |  &  |  *  |  (  |  )  |   |  _  |  +  |  {  |  }  |  |  |  GUI |
+            //                    | CTRL|     | SPC |   | ENT |     | ALT |
             bindings = <
-                &kp TILDE &kp EXCL     &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-                &kp LCTRL &caps_word   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-                &kp LSHFT &trans       &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                                              &kp LGUI &mo 3    &kp SPACE   &kp RET   &trans    &kp RALT
+                &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+                &kp GRAVE &kp EXCL  &kp AT   &kp HASH &kp DLLR  &kp PRCNT    &kp MINUS  &kp EQUAL &kp LBKT  &kp RBKT  &kp NUBS  &trans
+                &kp TILDE &kp CARET &kp AMPS &kp STAR &kp LPAR  &kp RPAR     &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE2 &kp LGUI
+                                            &kp LCTRL &trans    &kp SPACE    &kp RET    &trans    &kp LALT
             >;
         };
 
