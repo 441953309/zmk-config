@@ -29,14 +29,14 @@
 
         L1_layer {
             // -----------------------------------------------------------------------------------------
-            // |  `  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // |  ~  |  1  |  2  |  3  |  4  |  5  |   |  -  |  =  |  \  |  [  |  ]  |      |
-            // | SHFT|  6  |  7  |  8  |  9  |  0  |   |  _  |  +  |  |  |  {  |  }  |  GUI |
+            // |  `  |  1  |  2  |  3  |  4  |  5  |   |  _  |  +  |  |  |  {  |  }  | BKSP |
+            // |  ~  |  6  |  7  |  8  |  9  |  0  |   |  -  |  =  |  \  |  [  |  ]  |      |
+            // | SHFT|  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  GUI |
             //                   | CTRL|     | SPC |   | ENT |     |  ALT  |
             bindings = <
-                &kp GRAVE &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR   &kp BSPC
-                &kp TILDE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5       &kp MINUS  &kp EQUAL &kp BSLH  &kp LBKT  &kp RBKT   &none
-                &kp LSHFT &kp N6    &kp N7   &kp N8    &kp N9    &kp N0       &kp UNDER  &kp PLUS  &kp PIPE  &kp LBRC  &kp RBRC   &kp LGUI
+                &kp GRAVE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5       &kp UNDER  &kp PLUS  &kp PIPE  &kp LBRC  &kp RBRC   &kp BSPC
+                &kp TILDE &kp N6    &kp N7   &kp N8    &kp N9    &kp N0       &kp MINUS  &kp EQUAL &kp BSLH  &kp LBKT  &kp RBKT   &none
+                &kp LSHFT &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR   &kp LGUI
                                              &kp LCTRL &none     &kp SPACE    &kp RET    &none     &kp LALT
             >;
         };
@@ -46,12 +46,12 @@
             // |     |     |     |     |     |     |   |     |     |     |     |     | BKSP |
             // |     |     |     |     |     |     |   | LEFT| DOWN|  UP |RIGHT|     |      |
             // | SHFT|     |     |     |     |     |   |     |     |     |     |     |      |
-            //                   | CTRL|     | ENT |   | ENT |     | ALT |
+            //                   | CTRL| BKSP| ENT |   | ENT |     | ALT |
             bindings = <
                 &none     &none    &none    &none    &none     &none        &none     &none     &none     &none     &none    &kp BSPC
                 &none     &none    &none    &none    &none     &none        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &none
                 &kp LSHFT &none    &none    &none    &none     &none        &none     &none     &none     &none     &none    &none
-                                           &kp LCTRL &none     &kp RET      &kp RET   &none     &kp LALT
+                                           &kp LCTRL &kp BSPC  &kp RET      &kp RET   &none     &kp LALT
             >;
         };
 
