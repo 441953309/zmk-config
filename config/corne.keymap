@@ -18,12 +18,12 @@
             // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | 2&TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  GUI |
-            //                    | CTRL|  1  |3&SPC|   | ENT |     |  ALT  |
+            //                    | CTRL|  1  | SPC |   | ENT |  3   |  ALT  |
             bindings = <
                 &kp ESC    &kp Q   &kp W   &kp E   &kp R   &kp T        &kp Y   &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &lt 2 TAB  &kp A   &kp S   &kp D   &kp F   &kp G        &kp H   &kp J  &kp K     &kp L   &kp SEMI &kp SQT
                 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B        &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &kp LGUI
-                                        &kp LCTRL  &mo 1  &lt 3 SPACE   &kp RET &mo 3  &kp LALT
+                                        &kp LCTRL  &mo 1   &kp SPACE    &kp RET &mo 3  &kp LALT
             >;
         };
 
@@ -31,12 +31,12 @@
             // -----------------------------------------------------------------------------------------
             // |  `  |  1  |  2  |  3  |  4  |  5  |   |  _  |  +  |  |  |  {  |  }  | BKSP |
             // |  ~  |  6  |  7  |  8  |  9  |  0  |   |  -  |  =  |  \  |  [  |  ]  |      |
-            // | SHFT|  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  GUI |
+            // |  .  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  GUI |
             //                   | CTRL|     | SPC |   | ENT |     |  ALT  |
             bindings = <
                 &kp GRAVE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5       &kp UNDER  &kp PLUS  &kp PIPE  &kp LBRC  &kp RBRC   &kp BSPC
                 &kp TILDE &kp N6    &kp N7   &kp N8    &kp N9    &kp N0       &kp MINUS  &kp EQUAL &kp BSLH  &kp LBKT  &kp RBKT   &none
-                &kp LSHFT &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR   &kp LGUI
+                &kp DOT   &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR   &kp LGUI
                                              &kp LCTRL &none     &kp SPACE    &kp RET    &none     &kp LALT
             >;
         };
