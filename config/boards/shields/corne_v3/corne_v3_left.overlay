@@ -1,6 +1,6 @@
-// corne_left.overlay
+// corne_v3_left.overlay
 
-#include "corne.dtsi"
+#include "corne_v3.dtsi"
 
 &kscan0 {
     col-gpios
