@@ -12,3 +12,5 @@ if SHIELD_TBK_MINI_LEFT || SHIELD_TBK_MINI_RIGHT
 
 config ZMK_SPLIT
 	default y
+
+endif
