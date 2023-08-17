@@ -39,12 +39,12 @@
 
         L2_layer {
             // -----------------------------------------------------------------------------------------
-            // |     |  F1  |  F2  |  F3  |  F4  |  F5  |   | HOME|PG_UP|PG_DN| END |     | BKSP |
+            // |     |  F1  |  F2  |  F3  |  F4  |  F5  |   | HOME|PG_DN|PG_UP| END |     | BKSP |
             // |     |  F6  |  F7  |  F8  |  F9  |  F10 |   | LEFT| DOWN|  UP |RIGHT|     |      |
             // | SHFT|  F11 |  F12 |      |      |      |   |     |     |     |     |     |  GUI |
             //                     | CTRL | BKSP |  ENT |   | ENT |     | ALT |
             bindings = <
-                &none     &kp F1   &kp F2   &kp F3   &kp F4    &kp F5       &kp HOME  &kp PG_UP &kp PG_DN &kp END   &none    &kp BSPC
+                &none     &kp F1   &kp F2   &kp F3   &kp F4    &kp F5       &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none    &kp BSPC
                 &none     &kp F6   &kp F7   &kp F8   &kp F9    &kp F10      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &none
                 &kp LSHFT &kp F11  &kp F12  &none    &none     &none        &none     &none     &none     &none     &none    &kp LGUI
                                            &kp LCTRL &kp BSPC  &kp RET      &kp RET   &none     &kp LALT
