@@ -33,7 +33,7 @@
                 &kp GRAVE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5       &kp UNDER  &kp PLUS  &kp PIPE  &none  &kp LBRC  &kp RBRC
                 &kp TILDE &kp N6    &kp N7   &kp N8    &kp N9    &kp N0       &kp MINUS  &kp EQUAL &kp BSLH  &none  &kp LBKT  &kp RBKT
                 &kp DOT   &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &none  &kp LPAR  &kp RPAR
-                                             &kp LCTRL &none     &mo 4    &kp RET    &none     &kp LALT
+                                             &kp LCTRL &none     &kp SPACE    &kp RET    &none     &kp LALT
             >;
         };
 
@@ -41,27 +41,27 @@
             // -----------------------------------------------------------------------------------------
             // |     |  F1  |  F2  |  F3  |  F4  |  F5  |   | HOME|PG_UP|PG_DN| END |     | BKSP |
             // |     |  F6  |  F7  |  F8  |  F9  |  F10 |   | LEFT| DOWN|  UP |RIGHT|     |      |
-            // | SHFT|  F11 |  F12 |      |      |      |   |     |     |     |     |     |      |
+            // | SHFT|  F11 |  F12 |      |      |      |   |     |     |     |     |     |  GUI |
             //                     | CTRL | BKSP |  ENT |   | ENT |     | ALT |
             bindings = <
                 &none     &kp F1   &kp F2   &kp F3   &kp F4    &kp F5       &kp HOME  &kp PG_UP &kp PG_DN &kp END   &none    &kp BSPC
                 &none     &kp F6   &kp F7   &kp F8   &kp F9    &kp F10      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &none
-                &kp LSHFT &kp F11  &kp F12  &none    &none     &none        &none     &none     &none     &none     &none    &none
+                &kp LSHFT &kp F11  &kp F12  &none    &none     &none        &none     &none     &none     &none     &none    &kp LGUI
                                            &kp LCTRL &kp BSPC  &kp RET      &kp RET   &none     &kp LALT
             >;
         };
 
        L3_layer {
             // -----------------------------------------------------------------------------------------
-            // |  0  |  1  |  2  |  3  |  %  |  =  |   | HOME|PG_UP|PG_DN| END |     |  DEL |
-            // |  .  |  4  |  5  |  6  |  -  |  +  |   | LEFT| DOWN|  UP |RIGHT|     |      |
-            // |     |  7  |  8  |  9  |  /  |  *  |   | NEXT|VOLDN| MUTE|VOLUP| PREV|PLAY_PAUSE|
-            //                   |     |     |     |   |     |     | 4   |
+            // |  `  |     |     |     |     |     |   | HOME|PG_DN|PG_UP| END |     |  DEL |
+            // |  ~  |     |     |     |     |     |   | LEFT| DOWN|  UP |RIGHT|     |      |
+            // | SHFT|     |     |     |     |     |   | PREV|VOLDN| MUTE|VOLUP| NEXT|PLAY_PAUSE|
+            //                   | CTRL|  4  | SPC |   | ENT |     | ALT |
             bindings = <
-                &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp PRCNT     &kp EQUAL         &kp HOME    &kp PG_UP    &kp PG_DN   &kp END      &none      &kp DEL
-                &kp KP_DOT &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS  &kp KP_PLUS       &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT    &none      &none
-                &none      &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_SLASH  &kp KP_MULTIPLY   &kp C_PREV  &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &kp C_NEXT &kp C_PP
-                                                 &none      &none         &none             &none        &none        &mo 4
+                &kp GRAVE   &none   &none    &none    &none    &none          &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &none        &kp DEL
+                &kp TILDE   &none   &none    &none    &none    &none          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
+                &kp LSHFT   &none   &none    &none    &none    &none          &kp C_PREV   &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &kp C_NEXT   &kp C_PP
+                                          &kp LCTRL   &mo 4    &kp SPACE      &kp RET      &none        &kp LALT
             >;
         };
 
