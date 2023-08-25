@@ -14,12 +14,12 @@
             // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
             // | 2&TAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |  GUI |
-            //                    | CTRL|  1  | SPC |   | ENT |  3  | ALT |
+            //                    | CTRL|  1  |5&SPC|   | ENT |  3  | ALT |
             bindings = <
                 &kp ESC    &kp Q   &kp W   &kp E   &kp R   &kp T        &kp Y   &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &lt 2 TAB  &kp A   &kp S   &kp D   &kp F   &kp G        &kp H   &kp J  &kp K     &kp L   &kp SEMI &kp SQT
                 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B        &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &kp LGUI
-                                        &kp LCTRL  &mo 1   &kp SPACE    &kp RET &mo 3  &kp LALT
+                                        &kp LCTRL  &mo 1   &lt 5 SPACE    &kp RET &mo 3  &kp LALT
             >;
         };
 
@@ -42,12 +42,12 @@
             // |     |  F1  |  F2  |  F3  |  F4  |  F5  |   | HOME|PG_DN|PG_UP| END |     | BKSP |
             // |     |  F6  |  F7  |  F8  |  F9  |  F10 |   | LEFT| DOWN|  UP |RIGHT|     |      |
             // | SHFT|  F11 |  F12 |      |      |      |   |     |     |     |     |     |  GUI |
-            //                     | CTRL | BKSP |  ENT |   | ENT |     | ALT |
+            //                     |  ALT | BKSP |  ENT |   | ENT |     | ALT |
             bindings = <
                 &none     &kp F1   &kp F2   &kp F3   &kp F4    &kp F5       &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none    &kp BSPC
                 &none     &kp F6   &kp F7   &kp F8   &kp F9    &kp F10      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &none
                 &kp LSHFT &kp F11  &kp F12  &none    &none     &none        &none     &none     &none     &none     &none    &kp LGUI
-                                           &kp LCTRL &kp BSPC  &kp RET      &kp RET   &none     &kp LALT
+                                            &kp LALT &kp BSPC  &kp RET      &kp RET   &none     &kp LALT
             >;
         };
 
@@ -76,6 +76,15 @@
                 &none       &none         &none         &none         &none         &out OUT_TOG    &none       &none        &none  &none  &none  &none
                 &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none       &none        &none  &none  &none  &none
                                                         &none         &none         &none           &none       &none        &none
+            >;
+        };
+
+        L5_layer {
+            bindings = <
+                &kp BSPC   &kp P    &kp O   &kp I     &kp U   &kp Y        &kp Y   &kp U  &kp I     &kp O   &kp P    &kp BSPC
+                &kp SQT    &kp SEMI &kp L   &kp K     &kp J   &kp H        &kp H   &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+                &kp LSHFT  &kp FSLH &kp DOT &kp COMMA &kp M   &kp N        &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &kp LGUI
+                                           &kp LCTRL &kp LALT &none        &kp RET &mo 3  &kp LALT
             >;
         };
     };
