@@ -84,7 +84,7 @@
                 &kp BSPC   &kp P    &kp O   &kp I     &kp U   &kp Y        &none   &none   &none   &none   &none   &none
                 &kp SQT    &kp SEMI &kp L   &kp K     &kp J   &kp H        &none   &none   &none   &none   &none   &none
                 &kp LSHFT  &kp FSLH &kp DOT &kp COMMA &kp M   &kp N        &none   &none   &none   &none   &none   &none
-                                           &kp LCTRL  &none   &none        &none   &none   &none
+                                            &kp LALT  &none   &none        &none   &none   &none
             >;
         };
     };
