@@ -6,66 +6,68 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    keymap {
-        compatible = "zmk,keymap";
+  keymap {
+    compatible = "zmk,keymap";
 
-        L0_layer {
-            bindings = <
-                &kp ESC    &kp Q   &kp W   &kp E   &kp R   &kp T        &kp Y   &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &lt 2 TAB  &kp A   &kp S   &kp D   &kp F   &kp G        &kp H   &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B        &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &kp LCTRL
-                                  &kp LGUI   &mo 1   &lt 5 SPACE        &kp RET &mo 3  &kp LALT
-            >;
-        };
-
-        L1_layer {
-            bindings = <
-                &kp GRAVE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5         &kp UNDER  &kp PLUS  &kp PIPE  &none  &kp LBRC  &kp RBRC
-                &kp TILDE &kp N6    &kp N7   &kp N8    &kp N9    &kp N0         &kp MINUS  &kp EQUAL &kp BSLH  &none  &kp LBKT  &kp RBKT
-                &kp DOT   &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS  &kp STAR  &none  &kp LPAR  &kp RPAR
-                                             &kp LGUI  &none     &kp SPACE      &kp RET    &none     &kp LALT
-            >;
-        };
-
-        L2_layer {
-            bindings = <
-                &none     &kp F1   &kp F2   &kp F3    &kp F4    &kp F5          &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none    &kp BSPC
-                &none     &kp F6   &kp F7   &kp F8    &kp F9    &kp F10         &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &none
-                &kp LSHFT &kp F11  &kp F12  &kp LC(C) &kp LC(V) &none           &none     &none     &none     &none     &none    &kp RCTRL
-                                            &kp LALT  &kp BSPC  &kp RET         &kp RET   &none     &kp LALT
-            >;
-        };
-
-       L3_layer {
-            bindings = <
-                &kp GRAVE   &none   &none    &none    &none    &none            &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &none        &kp DEL
-                &kp TILDE   &none   &none    &none    &none    &none            &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
-                &kp LSHFT   &none   &none    &none    &none    &none            &kp C_PREV   &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &kp C_NEXT   &kp C_PP
-                                       &kp LGUI   &mo 4    &kp SPACE            &kp RET      &none        &kp LALT
-            >;
-        };
-
-        L4_layer {
-            // -----------------------------------------------------------------------------------------
-            // | BTCLR|     |     |     | BOOT|RESET|   |RESET| BOOT|     |     |     |      |
-            // |      |     |     |     |     | OUT |   |     |     |     |     |     |      |
-            // |      | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
-            //                    |     |     |     |   |     |     |     |
-            bindings = <
-                &bt BT_CLR  &none         &none         &none         &bootloader   &sys_reset          &sys_reset  &bootloader  &none  &none  &none  &none
-                &none       &none         &none         &none         &none         &out OUT_TOG        &none       &none        &none  &none  &none  &none
-                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none       &none        &none  &none  &none  &none
-                                                        &none         &none         &none               &none       &none        &none
-            >;
-        };
-
-        L5_layer {
-            bindings = <
-                &kp BSPC   &kp P    &kp O   &kp I     &kp U   &kp Y        &none   &none   &none   &none   &none   &none
-                &kp SQT    &kp SEMI &kp L   &kp K     &kp J   &kp H        &none   &none   &none   &none   &none   &none
-                &kp LSHFT  &kp FSLH &kp DOT &kp COMMA &kp M   &kp N        &none   &none   &none   &none   &none   &none
-                                            &none     &none   &none        &none   &none   &none
-            >;
-        };
+    L0_layer {
+      bindings = <
+        &none   &kp Q         &kp W         &kp E         &kp R   &kp T         &kp Y   &kp U  &kp I            &kp O          &kp P            &none
+        &none   &lt 1 A       &kp S         &kp D         &kp F   &kp G         &kp H   &kp J  &kp K            &kp L          &kp SEMI         &none
+        &none   &mt LSHFT Z   &mt LCTRL X   &mt LALT C    &kp V   &kp B         &kp N   &kp M  &mt RALT COMMA   &mt RCTRL DOT  &mt RSHFT FSLH   &none
+                                  &kp LGUI  &lt 2 TAB   &mt LSHFT SPACE         &kp RET &mo 3  &kp LCTRL
+      >;
     };
+
+    L2_layer {
+      bindings = <
+        &none   &none   &none   &none     &none     &none           &none     &none     &none   &none     &none    &none
+        &none   &none   &none   &none     &none     &none           &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &none    &none
+        &none   &none   &none   &kp LC(C) &kp LC(V) &none           &none     &none     &none   &none     &none    &none
+                                &kp ESC  &kp BSPC  &kp RET          &kp RET   &none     &kp ESC
+      >;
+    };
+
+    L1_layer {
+      bindings = <
+        &none   &kp N1    &kp N2  &kp N3    &kp N4    &kp N5        &kp MINUS  &kp PLUS   &kp LBRC  &kp LPAR  &kp PIPE   &none
+        &none   &kp N6    &kp N7  &kp N8    &kp N9    &kp N0        &kp UNDER  &kp EQUAL  &kp RBRC  &kp RPAR  &kp BSLH   &none
+        &none   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS   &kp LBKT  &kp RBKT  &kp STAR   &none    
+                                  &none     &none     &none         &kp RET    &none     &kp LALT
+      >;
+    };
+
+    
+
+    L3_layer {
+      bindings = <
+        &kp GRAVE   &none   &none    &none    &none    &none        &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &none        &kp DEL
+        &kp TILDE   &none   &none    &none    &none    &none        &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
+        &kp LSHFT   &none   &none    &none    &none    &none        &kp C_PREV   &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &kp C_NEXT   &kp C_PP
+                               &kp LGUI   &mo 4    &kp SPACE        &kp RET      &none        &kp LALT
+      >;
+    };
+
+    L4_layer {
+      // -----------------------------------------------------------------------------------------
+      // | BTCLR|     |     |     | BOOT|RESET|   |RESET| BOOT|     |     |     |      |
+      // |      |     |     |     |     | OUT |   |     |     |     |     |     |      |
+      // |      | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+      //                    |     |     |     |   |     |     |     |
+      bindings = <
+        &bt BT_CLR  &none         &none         &none         &bootloader   &sys_reset          &sys_reset  &bootloader  &none  &none  &none  &none
+        &none       &none         &none         &none         &none         &out OUT_TOG        &none       &none        &none  &none  &none  &none
+        &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none       &none        &none  &none  &none  &none
+                                                &none         &none         &none               &none       &none        &none
+      >;
+    };
+
+    L5_layer {
+      bindings = <
+        &kp BSPC   &kp P    &kp O   &kp I     &kp U   &kp Y        &none   &none   &none   &none   &none   &none
+        &kp SQT    &kp SEMI &kp L   &kp K     &kp J   &kp H        &none   &none   &none   &none   &none   &none
+        &kp LSHFT  &kp FSLH &kp DOT &kp COMMA &kp M   &kp N        &none   &none   &none   &none   &none   &none
+                                    &none     &none   &none        &none   &none   &none
+      >;
+    };
+  };
 };
