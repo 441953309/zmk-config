@@ -11,10 +11,10 @@
 
     L0_layer {
       bindings = <
-        &none   &lt 3 Q       &kp W         &kp E         &kp R   &kp T         &kp Y           &kp U   &kp I            &kp O          &kp P       &none
-        &none   &lt 2 A       &kp S         &kp D         &kp F   &kp G         &kp H           &kp J   &kp K            &kp L          &kp BSPC    &none
-        &none   &mt LSHFT Z   &mt LCTRL X   &mt LALT C    &kp V   &kp B         &kp N           &kp M   &mt RALT COMMA   &mt RCTRL DOT  &kp RSHFT   &none
-                              &mt LGUI ESC  &lt 1 TAB   &mt LSHFT SPACE         &mt LSHFT RET   &mo 3   &mt LGUI ESC
+        &none   &lt 3 Q         &kp W           &kp E           &kp R   &kp T         &kp Y             &kp U   &kp I               &kp O             &kp P       &none
+        &none   &lt 2 A         &kp S           &kp D           &kp F   &kp G         &kp H             &kp J   &kp K               &kp L             &kp BSPC    &none
+        &none   &ht_bl LSHFT Z  &ht_bl LCTRL X  &ht_bl LALT C   &kp V   &kp B         &kp N             &kp M   &ht_bl RALT COMMA   &ht_bl RCTRL DOT  &kp RSHFT   &none
+                              &ht_bl LGUI ESC  &lt 1 TAB   &ht_bl LSHFT SPACE         &ht_bl LSHFT RET  &mo 3   &ht_bl LGUI ESC
       >;
     };
 
