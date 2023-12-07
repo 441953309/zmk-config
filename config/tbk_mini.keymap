@@ -23,34 +23,30 @@
 
     L0_layer {
       bindings = <
-        &none   &lt 3 Q       &kp W           &kp E         &kp R   &kp T         &kp Y          &kp U   &kp I              &kp O           &kp P       &none
-        &none   &lt 2 A       &kp S           &kp D         &kp F   &kp G         &kp H          &kp J   &kp K              &kp L           &kp BSPC    &none
-        &none   &bhm LSHFT Z  &bhm LCTRL X    &bhm LALT C   &kp V   &kp B         &kp N          &kp M   &bhm RALT COMMA    &bhm RCTRL DOT  &kp RSHFT   &none
-                                &mt LGUI ESC  &lt 1 TAB   &mt LSHFT SPACE         &mt LSHFT RET  &mo 3   &mt LGUI ESC
+        &none   &lt 3 Q   &kp W         &kp E         &kp R   &kp T         &kp Y   &kp U   &kp I       &kp O    &kp P      &none
+        &none   &lt 2 A   &bhm LALT S   &bhm LSHFT D  &kp F   &kp G         &kp H   &kp J   &kp K       &kp L    &kp BSPC   &none
+        &none   &kp Z     &kp X         &kp C         &kp V   &kp B         &kp N   &kp M   &kp COMMA   &kp DOT  &kp FSLH   &none
+                          &mt LGUI ESC  &lt 1 TAB   &mt LSHFT SPACE         &mt LSHFT RET  &mo 3   &mt LGUI ESC
       >;
     };
 
     L1_layer {
       bindings = <
-        &none   &kp N1          &kp N2          &kp N3    &kp N4      &kp N5          &kp MINUS  &kp PLUS   &kp LBKT  &kp LBRC  &kp LPAR   &none
-        &none   &kp N6          &kp N7          &kp N8    &kp N9      &kp N0          &kp UNDER  &kp EQUAL  &kp RBKT  &kp RBRC  &kp RPAR   &none
-        &none   &mt LSHFT DOT   &mt LCTRL SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp SEMI  &kp COLON &kp QMARK  &none    
-                                                &none     &none       &none           &kp RET    &none     &kp LALT
+        &none   &kp N1      &kp N2          &kp N3    &kp N4      &kp N5          &kp MINUS  &kp PLUS   &kp LBKT  &kp LBRC  &kp LPAR   &none
+        &none   &kp N6      &kp N7          &kp N8    &kp N9      &kp N0          &kp UNDER  &kp EQUAL  &kp RBKT  &kp RBRC  &kp RPAR   &none
+        &none   &kp LSHFT   &mt LCTRL SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp SEMI  &kp COLON &kp QMARK  &none    
+                                            &none     &none       &none           &kp RET    &none     &kp LALT
       >;
     };
 
     L2_layer {
       bindings = <
-        &none   &none   &none   &none     &none     &kp DEL         &none     &none     &none   &none     &none    &none
-        &none   &none   &none   &none     &none     &none           &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &none    &none
-        &none   &none   &none   &none     &none     &none           &none     &none     &none   &none     &none    &none
-                                &kp ESC   &kp BSPC  &kp RET         &kp RET   &none     &kp ESC
+        &none   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)         &kp LC(Y)   &kp LC(U)   &kp LC(I)     &kp LC(O)   &kp LC(P)   &none
+        &none   &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)         &kp LEFT    &kp DOWN    &kp UP        &kp RIGHT   &kp BSPC    &none
+        &none   &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)         &kp LC(N)   &kp LC(M)   &kp LC(COMMA) &kp LC(DOT) &kp RSHFT   &none
+                                        &kp ESC     &kp BSPC    &kp RET           &kp RET     &none       &kp ESC
       >;
     };
-    //&none   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp STAR   &kp AMPS   &kp LBKT  &kp RBKT  &kp CARET   &none
-
-    
-    
 
     L3_layer {
       bindings = <
