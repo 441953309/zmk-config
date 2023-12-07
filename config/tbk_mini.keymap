@@ -8,9 +8,9 @@
 #define QUICK_TAP_MS 175
 
 &mt {
-    flavor = "hold-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
+  flavor = "balanced";
+  tapping-term-ms = <200>;
+  quick-tap-ms = <QUICK_TAP_MS>;
 };
 
 &lt {  // layer-tap config
@@ -21,23 +21,23 @@
 
 / {
   behaviors {
-    bhm: balanced_homerow_mods {
+    mt_tui: tui_mod_tap {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_MODS";
+      label = "TUI_MOD_TAP";
       #binding-cells = <2>;
       tapping-term-ms = <200>;    // <---[[moderate duration]]
       quick-tap-ms = <QUICK_TAP_MS>;
-      flavor = "balanced";
+      flavor = "tap-unless-interrupted";
       bindings = <&kp>, <&kp>;
     };
 
-    bmo: balanced_momentary_layer {
+    lt_tui: tui_layer_tap {
       compatible = "zmk,behavior-hold-tap";
-      label = "momentary_layer";
+      label = "TUI_LAYER_TAP";
       #binding-cells = <2>;
-      tapping-term-ms = <200>;    // <---[[moderate duration]]
+      tapping-term-ms = <200>;
       quick-tap-ms = <QUICK_TAP_MS>;
-      flavor = "balanced";
+      flavor = "tap-unless-interrupted";
       bindings = <&mo>, <&kp>;
     };
   };
@@ -47,10 +47,10 @@
 
     L0_layer {
       bindings = <
-        &none   &lt 3 Q   &kp W         &kp E         &kp R         &kp T                   &kp Y           &kp U          &kp I         &kp O          &kp P      &none
-        &none   &lt 1 A   &bhm LCTRL S  &bhm LALT D   &bhm LSHFT F  &kp G                   &kp H           &bhm RSHFT J   &bhm RALT K   &bhm RCTRL L   &kp BSPC   &none
-        &none   &kp Z     &kp X         &kp C         &kp V         &kp B                   &kp N           &kp M          &kp COMMA     &kp DOT        &kp FSLH   &none
-                                        &mt LGUI ESC  &lt 2 TAB     &bhm LSHFT SPACE        &bhm RSHFT RET  &lt 3 DEL      &mt LGUI ESC
+        &none   &lt 3 Q   &kp W         &kp E             &kp R           &kp T                   &kp Y               &kp U           &kp I         &kp O          &kp P      &none
+        &none   &lt 1 A   &mt LCTRL S   &mt LALT D        &mt LSHFT F     &kp G                   &kp H               &mt RSHFT J     &mt RALT K    &mt RCTRL L    &kp BSPC   &none
+        &none   &kp Z     &kp X         &kp C             &kp V           &kp B                   &kp N               &kp M           &kp COMMA     &kp DOT        &kp FSLH   &none
+                                        &mt_tui LGUI ESC  &lt_tui 2 TAB   &mt_tui LSHFT SPACE     &mt_tui RSHFT RET   &lt_tui 3 DEL   &mt_tui LGUI ESC
       >;
     };
 
@@ -67,7 +67,7 @@
       bindings = <
         &none   &kp N1          &kp N2    &kp N3    &kp N4      &kp N5          &kp UNDER  &kp PLUS   &kp LBKT  &kp LBRC  &kp LPAR   &none
         &none   &kp N6          &kp N7    &kp N8    &kp N9      &kp N0          &kp MINUS  &kp EQUAL  &kp RBKT  &kp RBRC  &kp RPAR   &none
-        &none   &bhm LSHFT DOT  &kp SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp COLON &kp SEMI  &kp BSLH   &none    
+        &none   &mt LSHFT DOT  &kp SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp COLON &kp SEMI  &kp BSLH   &none    
                                           &none     &none       &none           &kp RET    &none     &kp LALT
       >;
     };
