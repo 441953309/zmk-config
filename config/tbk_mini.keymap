@@ -5,14 +5,22 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define QUICK_TAP_MS 175
+
+&lt {  // layer-tap config
+    flavor = "hold-preferred";
+    tapping-term-ms = <175>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
 / {
   behaviors {
     bhm: balanced_homerow_mods {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS";
       #binding-cells = <2>;
-      tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <0>;
+      tapping-term-ms = <175>;    // <---[[moderate duration]]
+      quick-tap-ms = <QUICK_TAP_MS>;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
     };
@@ -26,7 +34,7 @@
         &none   &lt 3 Q   &kp W         &kp E         &kp R         &kp T                   &kp Y           &kp U          &kp I         &kp O          &kp P      &none
         &none   &lt 1 A   &bhm LCTRL S  &bhm LALT D   &bhm LSHFT F  &kp G                   &kp H           &bhm RSHFT J   &bhm RALT K   &bhm RCTRL L   &kp BSPC   &none
         &none   &kp Z     &kp X         &kp C         &kp V         &kp B                   &kp N           &kp M          &kp COMMA     &kp DOT        &kp FSLH   &none
-                                        &mt LGUI ESC  &lt 2 TAB     &mt LSHFT SPACE         &mt RSHFT RET   &mo 3          &mt LGUI ESC
+                                        &mt LGUI ESC  &lt 2 TAB     &bhm LSHFT SPACE        &bhm RSHFT RET   &mo 3          &mt LGUI ESC
       >;
     };
 
