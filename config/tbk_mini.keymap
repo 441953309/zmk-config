@@ -32,18 +32,18 @@
 
     L1_layer {
       bindings = <
-        &none   &kp N1      &kp N2          &kp N3    &kp N4      &kp N5          &kp MINUS  &kp PLUS   &kp LBKT  &kp LBRC  &kp LPAR   &none
-        &none   &kp N6      &kp N7          &kp N8    &kp N9      &kp N0          &kp UNDER  &kp EQUAL  &kp RBKT  &kp RBRC  &kp RPAR   &none
-        &none   &kp LSHFT   &mt LCTRL SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp SEMI  &kp COLON &kp QMARK  &none    
-                                            &none     &none       &none           &kp RET    &none     &kp LALT
+        &none   &kp N1      &kp N2    &kp N3    &kp N4      &kp N5          &kp MINUS  &kp PLUS   &kp LBKT  &kp LBRC  &kp LPAR   &none
+        &none   &kp N6      &kp N7    &kp N8    &kp N9      &kp N0          &kp UNDER  &kp EQUAL  &kp RBKT  &kp RBRC  &kp RPAR   &none
+        &none   &kp LSHFT   &kp SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp SEMI  &kp COLON &kp QMARK  &none    
+                                      &none     &none       &none           &kp RET    &none     &kp LALT
       >;
     };
 
     L2_layer {
       bindings = <
-        &none   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)         &kp LC(Y)   &kp LC(U)   &kp LC(I)     &kp LC(O)   &kp LC(P)   &none
-        &none   &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)         &kp LEFT    &kp DOWN    &kp UP        &kp RIGHT   &kp BSPC    &none
-        &none   &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)         &kp LC(N)   &kp LC(M)   &kp LC(COMMA) &kp LC(DOT) &kp RSHFT   &none
+        &none   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)         &kp LC(Y)   &kp LC(U)   &kp LC(I)     &kp LC(O)   &kp LC(P)     &none
+        &none   &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)         &kp LEFT    &kp DOWN    &kp UP        &kp RIGHT   &kp BSPC      &none
+        &none   &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)         &kp LC(N)   &kp LC(M)   &kp LC(COMMA) &kp LC(DOT) &kp LC(FSLH)  &none
                                         &kp ESC     &kp BSPC    &kp RET           &kp RET     &none       &kp ESC
       >;
     };
