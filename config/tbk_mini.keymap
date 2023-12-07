@@ -7,6 +7,12 @@
 
 #define QUICK_TAP_MS 175
 
+&mt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <175>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
 &lt {  // layer-tap config
     flavor = "hold-preferred";
     tapping-term-ms = <175>;
