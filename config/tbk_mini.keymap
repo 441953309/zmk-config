@@ -40,7 +40,7 @@
         &none   &lt 3 Q   &kp W         &kp E         &kp R         &kp T                   &kp Y           &kp U          &kp I         &kp O          &kp P      &none
         &none   &lt 1 A   &bhm LCTRL S  &bhm LALT D   &bhm LSHFT F  &kp G                   &kp H           &bhm RSHFT J   &bhm RALT K   &bhm RCTRL L   &kp BSPC   &none
         &none   &kp Z     &kp X         &kp C         &kp V         &kp B                   &kp N           &kp M          &kp COMMA     &kp DOT        &kp FSLH   &none
-                                        &mt LGUI ESC  &lt 2 TAB     &bhm LSHFT SPACE        &bhm RSHFT RET   &mo 3          &mt LGUI ESC
+                                        &mt LGUI ESC  &lt 2 TAB     &bhm LSHFT SPACE        &bhm RSHFT RET  &lt 3 DEL      &mt LGUI ESC
       >;
     };
 
@@ -57,7 +57,7 @@
       bindings = <
         &none   &kp N1          &kp N2    &kp N3    &kp N4      &kp N5          &kp UNDER  &kp PLUS   &kp LBKT  &kp LBRC  &kp LPAR   &none
         &none   &kp N6          &kp N7    &kp N8    &kp N9      &kp N0          &kp MINUS  &kp EQUAL  &kp RBKT  &kp RBRC  &kp RPAR   &none
-        &none   &bhm LSHFT DOT  &kp SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp COLON &kp SEMI  &none      &none    
+        &none   &bhm LSHFT DOT  &kp SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp COLON &kp SEMI  &kp BSLH   &none    
                                           &none     &none       &none           &kp RET    &none     &kp LALT
       >;
     };
