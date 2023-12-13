@@ -67,34 +67,34 @@
 
     L0_layer {
       bindings = <
-        &none   &tlt 3 Q  &kp W         &kp E         &kp R         &kp T               &kp Y           &kp U         &kp I         &kp O          &kp P      &none
-        &none   &tlt 1 A  &tmt LCTRL S  &tmt LALT D   &tmt LSHFT F  &kp G               &kp H           &tmt RSHFT J  &tmt RALT K   &tmt RCTRL L   &kp BSPC   &none
-        &none   &kp Z     &kp X         &kp C         &kp V         &kp B               &kp N           &kp M         &kp COMMA     &kp DOT        &kp FSLH   &none
-                                        &mt LGUI ESC  &lt 2 TAB     &kp SPACE           &kp RET         &lt 3 BSPC    &mt RGUI DEL
+        &none   &kp Q     &kp W         &kp E         &kp R         &kp T           &kp Y     &kp U         &kp I         &kp O          &kp P      &none
+        &none   &tlt 1 A  &tmt LCTRL S  &tmt LALT D   &tmt LSHFT F  &kp G           &kp H     &tmt RSHFT J  &tmt RALT K   &tmt RCTRL L   &kp BSPC   &none
+        &none   &kp Z     &kp X         &kp C         &kp V         &kp B           &kp N     &kp M         &kp COMMA     &kp DOT        &kp FSLH   &none
+                                        &mt LGUI ESC  &lt 2 TAB     &kp SPACE       &kp RET   &lt 3 BSPC    &mt RGUI DEL
       >;
     };
 
     L1_layer {
       bindings = <
-        &none   &trans    &trans        &trans        &trans        &trans          &trans      &trans      &trans     &trans      &trans     &none
-        &none   &none     &kp LCTRL     &kp LALT      &kp LSHFT     &trans          &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &kp BSPC   &none
-        &none   &trans    &trans        &trans        &trans        &trans          &trans      &trans      &trans     &trans      &trans     &none
+        &none   &none     &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp C_PP        &none       &none       &none      &none       &none      &none
+        &none   &none     &kp LCTRL     &kp LALT      &kp LSHFT     &none           &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &kp BSPC   &none
+        &none   &none     &none         &none         &kp F2        &kp F12         &none       &none       &none      &none       &none      &none
                                         &kp LGUI      &kp BSPC      &kp RET         &kp RET     &none       &none
       >;
     };
 
     L2_layer {
       bindings = <
-        &none   &kp N1          &kp N2    &kp N3    &kp N4      &kp N5          &kp UNDER  &kp PLUS   &kp LBKT  &kp LBRC  &kp LPAR   &none
-        &none   &kp N6          &kp N7    &kp N8    &kp N9      &kp N0          &kp MINUS  &kp EQUAL  &kp RBKT  &kp RBRC  &kp RPAR   &none
-        &none   &mt LSHFT DOT   &kp SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp COLON &kp SEMI  &kp BSLH   &none    
-                                          &none     &none       &none           &kp RET    &none     &kp LALT
+        &none   &kp N1    &kp N2        &kp N3        &kp N4        &kp N5          &kp UNDER   &kp PLUS          &kp LBKT        &kp LBRC         &kp LPAR   &none
+        &none   &kp N6    &tmt LCTRL N7 &tmt LALT N8  &tmt LSHFT N9 &kp N0          &kp MINUS   &tmt RSHFT EQUAL  &tmt RALT RBKT  &tmt RCTRL RBRC  &kp RPAR   &none
+        &none   &kp DOT   &kp SQT       &kp DQT       &kp GRAVE     &kp TILDE       &kp FSLH    &kp STAR          &kp COLON       &kp SEMI         &kp BSLH   &none    
+                                        &none         &none         &none           &kp RET     &none             &kp LALT
       >;
     };
 
     L3_layer {
       bindings = <
-        &none   &none   &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp C_PP     &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &none        &kp DEL
+        &none   &none   &none         &none       &none         &none        &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &none        &kp DEL
         &none   &none   &none         &none       &none         &none        &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
         &none   &none   &none         &none       &none         &none        &kp C_PREV   &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &kp C_NEXT   &kp C_PP
                                       &none       &mo 4         &none        &none        &none        &none
@@ -103,15 +103,15 @@
 
     L4_layer {
             // -----------------------------------------------------------------------------------------
-      // | BTCLR|     |     |     | BOOT|RESET|   |RESET| BOOT|     |     |     |      |
-      // |      |     |     |     |     | OUT |   |     |     |     |     |     |      |
-      // |      | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+      // |     |BTCLR|     |     | BOOT|RESET|   |RESET| BOOT|     |     |     |      |
+      // |     |     |     |     |     | OUT |   |     |     |     |     |     |      |
+      // |     | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
       //                    |     |     |     |   |     |     |     |
       bindings = <
-        &bt BT_CLR  &none         &none         &none         &bootloader   &sys_reset          &sys_reset  &bootloader  &none  &none  &none  &none
-        &none       &none         &none         &none         &none         &out OUT_TOG        &none       &none        &none  &none  &none  &none
-        &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none       &none        &none  &none  &none  &none
-                                                &none         &none         &none               &none       &none        &none
+        &none  &bt BT_CLR    &none         &none         &bootloader   &sys_reset          &sys_reset  &bootloader  &none  &none  &none  &none
+        &none  &none         &none         &none         &none         &out OUT_TOG        &none       &none        &none  &none  &none  &none
+        &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none       &none        &none  &none  &none  &none
+                                           &none         &none         &none               &none       &none        &none
       >;
     };
   };
