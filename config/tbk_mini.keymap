@@ -79,7 +79,7 @@
         &none   &none     &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp C_PP        &none       &none       &none      &none       &none      &none
         &none   &none     &kp LCTRL     &kp LALT      &kp LSHFT     &none           &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &kp BSPC   &none
         &none   &none     &none         &none         &kp F2        &kp F12         &none       &none       &none      &none       &none      &none
-                                        &kp LGUI      &kp BSPC      &kp RET         &kp RET     &none       &none
+                                        &kp LGUI      &kp BSPC      &kp RET         &kp RET     &kp BSPC    &kp RGUI
       >;
     };
 
@@ -88,16 +88,16 @@
         &none   &kp N1    &kp N2        &kp N3        &kp N4        &kp N5          &kp UNDER   &kp PLUS          &kp LBKT        &kp LBRC         &kp LPAR   &none
         &none   &kp N6    &tmt LCTRL N7 &tmt LALT N8  &tmt LSHFT N9 &kp N0          &kp MINUS   &tmt RSHFT EQUAL  &tmt RALT RBKT  &tmt RCTRL RBRC  &kp RPAR   &none
         &none   &kp DOT   &kp SQT       &kp DQT       &kp GRAVE     &kp TILDE       &kp FSLH    &kp STAR          &kp COLON       &kp SEMI         &kp BSLH   &none    
-                                        &none         &none         &none           &kp RET     &none             &kp LALT
+                                        &none         &none         &none           &kp RET     &kp BSPC          &kp RGUI
       >;
     };
 
     L3_layer {
       bindings = <
-        &none   &none   &none         &none       &none         &none        &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &none        &kp DEL
-        &none   &none   &none         &none       &none         &none        &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
-        &none   &none   &none         &none       &none         &none        &kp C_PREV   &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &kp C_NEXT   &kp C_PP
-                                      &none       &mo 4         &none        &none        &none        &none
+        &none   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5       &kp HOME     &kp PG_DN     &kp PG_UP    &kp END        &none        &kp DEL
+        &none   &kp F6    &kp F7    &kp F8    &kp F9    &kp F10      &kp LEFT     &kp DOWN      &kp UP       &kp RIGHT      &none        &none
+        &none   &kp F11   &kp F12   &none     &none     &none        &kp C_PREV   &kp C_VOL_DN  &kp C_MUTE   &kp C_VOL_UP   &kp C_NEXT   &kp C_PP
+                                    &none     &mo 4     &none        &none        &none         &none
       >;
     };
 
