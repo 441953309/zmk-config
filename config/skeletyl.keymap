@@ -8,15 +8,15 @@
 &mt {
   flavor = "hold-preferred";
   tapping-term-ms = <200>;
-  quick-tap-ms = <200>;
-  retro-tap;
+  quick-tap-ms = <175>;
+  // retro-tap;
 };
 
 &lt {  // layer-tap config
-    flavor = "hold-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-    retro-tap;
+  flavor = "hold-preferred";
+  tapping-term-ms = <200>;
+  quick-tap-ms = <175>;
+  // retro-tap;
 };
 
 / {
@@ -26,7 +26,7 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <200>;
+      quick-tap-ms = <175>;
       bindings = <&kp>, <&kp>;
     };
 
@@ -35,7 +35,7 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <200>;
+      quick-tap-ms = <175>;
       bindings = <&mo>, <&kp>;
     };
 
@@ -43,9 +43,10 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "tap-preferred";
+      retro-tap;
       tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <200>;
-      require-prior-idle-ms = <125>;
+      quick-tap-ms = <175>;
+      require-prior-idle-ms = <150>;
       bindings = <&kp>, <&kp>;
     };
 
@@ -53,9 +54,10 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "tap-preferred";
+      retro-tap;
       tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <200>;
-      require-prior-idle-ms = <125>;
+      quick-tap-ms = <175>;
+      require-prior-idle-ms = <150>;
       bindings = <&mo>, <&kp>;
     };
   };
@@ -65,37 +67,37 @@
 
     L0_layer {
       bindings = <
-        &tlt 3 Q  &kp W         &kp E         &kp R         &kp T               &kp Y           &kp U         &kp I         &kp O          &kp P
-        &tlt 1 A  &tmt LCTRL S  &tmt LALT D   &tmt LSHFT F  &kp G               &kp H           &tmt RSHFT J  &tmt RALT K   &tmt RCTRL L   &kp BSPC
-        &kp Z     &kp X         &kp C         &kp V         &kp B               &kp N           &kp M         &kp COMMA     &kp DOT        &kp FSLH
-                                &mt LGUI ESC  &lt 2 TAB     &kp SPACE           &kp RET         &lt 3 BSPC    &mt RGUI DEL
+        &kp Q     &kp W         &kp E         &kp R         &kp T           &kp Y     &kp U         &kp I         &kp O          &kp P
+        &tlt 1 A  &tmt LCTRL S  &tmt LALT D   &tmt LSHFT F  &kp G           &kp H     &tmt RSHFT J  &tmt RALT K   &tmt RCTRL L   &kp BSPC
+        &kp Z     &kp X         &kp C         &kp V         &kp B           &kp N     &kp M         &kp COMMA     &kp DOT        &kp FSLH
+                                &mt LGUI ESC  &lt 2 TAB     &kp SPACE       &kp RET   &lt 3 BSPC    &mt RGUI DEL
       >;
     };
 
     L1_layer {
       bindings = <
-        &trans    &trans        &trans        &trans        &trans          &trans      &trans      &trans     &trans      &trans
-        &none     &kp LCTRL     &kp LALT      &kp LSHFT     &trans          &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &kp BSPC
-        &trans    &trans        &trans        &trans        &trans          &trans      &trans      &trans     &trans      &trans
-                                &kp LGUI      &kp BSPC      &kp RET         &kp RET     &none       &none
+        &none     &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp C_PP        &none       &none       &none      &none       &none
+        &none     &kp LCTRL     &kp LALT      &kp LSHFT     &none           &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &kp BSPC
+        &none     &none         &none         &kp F2        &kp F12         &none       &none       &none      &none       &none      &none
+                                &kp LGUI      &kp BSPC      &kp RET         &kp RET     &kp BSPC    &kp RGUI
       >;
     };
 
     L2_layer {
       bindings = <
-        &kp N1          &kp N2    &kp N3    &kp N4      &kp N5          &kp UNDER  &kp PLUS   &kp LBKT  &kp LBRC  &kp LPAR
-        &kp N6          &kp N7    &kp N8    &kp N9      &kp N0          &kp MINUS  &kp EQUAL  &kp RBKT  &kp RBRC  &kp RPAR
-        &mt LSHFT DOT   &kp SQT   &kp DQT   &kp GRAVE   &kp TILDE       &kp FSLH   &kp STAR   &kp COLON &kp SEMI  &kp BSLH   
-                                  &none     &none       &none           &kp RET    &none     &kp LALT
+        &kp N1    &kp N2        &kp N3        &kp N4        &kp N5          &kp UNDER   &kp PLUS          &kp LBKT        &kp LBRC         &kp LPAR
+        &kp N6    &tmt LCTRL N7 &tmt LALT N8  &tmt LSHFT N9 &kp N0          &kp MINUS   &tmt RSHFT EQUAL  &tmt RALT RBKT  &tmt RCTRL RBRC  &kp RPAR
+        &kp DOT   &kp SQT       &kp DQT       &kp GRAVE     &kp TILDE       &kp FSLH    &kp STAR          &kp COLON       &kp SEMI         &kp BSLH
+                                &none         &none         &none           &kp RET     &kp BSPC          &kp RGUI
       >;
     };
 
     L3_layer {
       bindings = <
-        &none   &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp C_PP     &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &none
-        &none   &none         &none       &none         &none        &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none
-        &none   &none         &none       &none         &none        &kp C_PREV   &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &kp C_NEXT
-                              &none       &mo 4         &none        &none        &none        &none
+        &kp F1    &kp F2    &kp F3    &kp F4    &kp F5       &kp HOME     &kp PG_DN     &kp PG_UP    &kp END        &none
+        &kp F6    &kp F7    &kp F8    &kp F9    &kp F10      &kp LEFT     &kp DOWN      &kp UP       &kp RIGHT      &none
+        &kp F11   &kp F12   &none     &none     &none        &kp C_PREV   &kp C_VOL_DN  &kp C_MUTE   &kp C_VOL_UP   &kp C_NEXT
+                            &none     &mo 4     &none        &none        &none         &none
       >;
     };
 
