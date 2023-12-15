@@ -8,14 +8,14 @@
 &mt {
   flavor = "hold-preferred";
   tapping-term-ms = <200>;
-  quick-tap-ms = <175>;
+  quick-tap-ms = <200>;
   // retro-tap;
 };
 
 &lt {  // layer-tap config
   flavor = "hold-preferred";
   tapping-term-ms = <200>;
-  quick-tap-ms = <175>;
+  quick-tap-ms = <200>;
   // retro-tap;
 };
 
@@ -26,7 +26,7 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <175>;
+      quick-tap-ms = <200>;
       bindings = <&kp>, <&kp>;
     };
 
@@ -35,7 +35,7 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <175>;
+      quick-tap-ms = <200>;
       bindings = <&mo>, <&kp>;
     };
 
@@ -45,7 +45,7 @@
       flavor = "tap-preferred";
       //retro-tap;
       tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <175>;
+      quick-tap-ms = <200>;
       require-prior-idle-ms = <125>;
       bindings = <&kp>, <&kp>;
     };
@@ -56,7 +56,7 @@
       flavor = "tap-preferred";
       //retro-tap;
       tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <175>;
+      quick-tap-ms = <200>;
       require-prior-idle-ms = <125>;
       bindings = <&mo>, <&kp>;
     };
@@ -70,7 +70,7 @@
         &kp Q     &kp W         &kp E         &kp R         &kp T           &kp Y     &kp U         &kp I         &kp O          &kp P
         &tlt 1 A  &tmt LCTRL S  &tmt LALT D   &tmt LSHFT F  &kp G           &kp H     &tmt RSHFT J  &tmt RALT K   &tmt RCTRL L   &kp SEMI
         &kp Z     &kp X         &kp C         &kp V         &kp B           &kp N     &kp M         &kp COMMA     &kp DOT        &kp FSLH
-                                &mt LGUI ESC  &lt 2 TAB     &kp SPACE       &kp RET   &lt 3 BSPC    &mt RGUI DEL
+                                &mt LGUI ESC  &lt 2 TAB     &lt 5 SPACE     &kp RET   &lt 3 BSPC    &mt RGUI DEL
       >;
     };
     
