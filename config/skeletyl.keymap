@@ -43,7 +43,7 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "tap-preferred";
-      retro-tap;
+      //retro-tap;
       tapping-term-ms = <200>;    // <---[[moderate duration]]
       quick-tap-ms = <175>;
       require-prior-idle-ms = <125>;
@@ -54,7 +54,7 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "tap-preferred";
-      retro-tap;
+      //retro-tap;
       tapping-term-ms = <200>;    // <---[[moderate duration]]
       quick-tap-ms = <175>;
       require-prior-idle-ms = <125>;
