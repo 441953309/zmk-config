@@ -68,7 +68,7 @@
     L0_layer {
       bindings = <
         &kp Q     &kp W         &kp E         &kp R         &kp T           &kp Y     &kp U         &kp I         &kp O          &kp P
-        &tlt 1 A  &tmt LCTRL S  &tmt LALT D   &tmt LSHFT F  &kp G           &kp H     &tmt RSHFT J  &tmt RALT K   &tmt RCTRL L   &kp SEMI
+        &tlt 1 A  &tmt LCTRL S  &tmt LALT D   &tmt LSHFT F  &kp G           &kp H     &tmt RSHFT J  &tmt RALT K   &tmt RCTRL L   &kp BSPC
         &kp Z     &kp X         &kp C         &kp V         &kp B           &kp N     &kp M         &kp COMMA     &kp DOT        &kp FSLH
                                 &mt LGUI ESC  &lt 2 TAB     &lt 5 SPACE     &kp RET   &lt 3 BSPC    &mt RGUI DEL
       >;
@@ -77,7 +77,7 @@
     L1_layer {
       bindings = <
         &none     &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp C_PP        &none       &none       &none      &none       &none
-        &none     &kp LCTRL     &kp LALT      &kp LSHFT     &none           &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &none
+        &none     &kp LCTRL     &kp LALT      &kp LSHFT     &none           &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &BSPC
         &none     &none         &none         &kp F2        &kp F12         &none       &none       &none      &none       &none
                                 &kp LGUI      &kp BSPC      &kp RET         &kp RET     &kp BSPC    &kp RGUI
       >;
