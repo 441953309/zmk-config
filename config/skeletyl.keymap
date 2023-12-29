@@ -70,7 +70,7 @@
         &kp Q     &kp W         &kp E         &kp R         &kp T           &kp Y     &kp U         &kp I         &kp O          &kp P
         &tlt 1 A  &tmt LCTRL S  &tmt LALT D   &tmt LSHFT F  &kp G           &kp H     &tmt RSHFT J  &tmt RALT K   &tmt RCTRL L   &kp SQT
         &kp Z     &kp X         &kp C         &kp V         &kp B           &kp N     &kp M         &kp COMMA     &kp DOT        &kp FSLH
-                                &mt LGUI ESC  &lt 2 TAB     &lt 5 SPACE     &kp RET   &lt 3 BSPC    &mt RGUI GRAVE
+                                &mt LGUI ESC  &lt 2 TAB     &lt 5 SPACE     &kp RET   &kp BSPC      &mt RGUI GRAVE
       >;
     };
     
@@ -87,8 +87,8 @@
       bindings = <
         &kp N1    &kp N2    &kp N3      &kp N4      &kp N5          &kp UNDER   &kp PLUS    &kp LBKT    &kp LBRC  &kp LPAR
         &kp N6    &kp N7    &kp N8      &kp N9      &kp N0          &kp MINUS   &kp EQUAL   &kp RBKT    &kp RBRC  &kp RPAR
-        &kp EXCL  &kp AT    &kp HASH    &kp DLLR    &kp PRCNT       &kp AMPS    &kp STAR    &kp CARET   &kp SEMI  &kp COLON
-                            &none       &none       &none           &kp PIPE    &kp BSLH    &none
+        &kp EXCL  &kp AT    &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp SEMI  &kp COLON
+                            &none       &none       &none           &kp PIPE    &mo 3       &kp BSLH
       >;
     };
 
