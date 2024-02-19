@@ -98,7 +98,7 @@
 
        L3_layer {
             bindings = <
-                &none   &none     &none     &none     &none     &none                       &none        &none         &none        &none          &none        &tog 5
+                &none   &none     &none     &none     &none     &none                       &none        &none         &none        &none          &none        &tog 6
                 &none   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                      &kp HOME     &kp PG_DN     &kp PG_UP    &kp END        &none        &none
                 &none   &kp F6    &kp F7    &kp F8    &kp F9    &kp F10                     &kp LEFT     &kp DOWN      &kp UP       &kp RIGHT      &none        &none
                 &none   &kp F11   &kp F12   &none     &none     &none     &none     &none   &kp C_PREV   &kp C_VOL_DN  &kp C_MUTE   &kp C_VOL_UP   &kp C_NEXT   &none
@@ -120,7 +120,18 @@
 
         L5_layer {
             bindings = <
-                &kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                            &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &tog 5
+                &none   &none      &none     &none       &none   &none                    &none   &none   &none   &none   &none   &none
+                &none   &kp P      &kp O     &kp I       &kp U   &kp Y                    &none   &none   &none   &none   &none   &none
+                &none   &kp SQT    &kp L     &kp K       &kp J   &kp H                    &none   &none   &none   &none   &none   &none
+                &none   &kp FSLH   &kp DOT   &kp COMMA   &kp M   &kp N   &none    &none   &none   &none   &none   &none   &none   &none
+                                   &none     &none       &none   &none   &none    &none   &none   &none   &none   &none
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
+        };
+
+        L6_layer {
+            bindings = <
+                &kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                            &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &tog 6
                 &kp GRAVE  &kp Q      &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
                 &kp TAB    &kp A      &kp S      &kp D      &kp F      &kp G                             &kp H      &kp J      &kp K      &kp L      &kp SQT    &kp SEMI
                 &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp C_MUTE  &kp C_PP   &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
