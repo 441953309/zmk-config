@@ -79,7 +79,7 @@
                 &none   &none   &none         &none         &none         &none                                 &none       &none       &none      &none       &none      &none
                 &none   &none   &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp C_PP                              &none       &none       &none      &none       &none      &none
                 &none   &none   &kp LGUI      &kp LALT      &kp LSHFT     &none                                 &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &none      &none
-                &none   &none   &none         &none         &kp F2        &kp F12       &none       &none       &none       &none       &none      &none       &none      &none
+                &none   &none   &none         &kp F8        &kp F2        &kp F12       &none       &none       &none       &none       &none      &none       &none      &none
                                 &none         &none         &kp LCTRL     &kp BSPC      &kp RET     &kp RET     &kp DEL     &kp RCTRL   &none      &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -87,10 +87,10 @@
 
         L2_layer {
             bindings = <
-                &none   &none     &none     &none       &none       &none                               &none       &none       &none      &none       &none      &none
-                &none   &kp N1    &kp N2    &kp N3      &kp N4      &kp N5                              &kp UNDER   &kp PLUS    &kp LBKT    &kp LBRC  &kp LPAR    &none
-                &none   &kp N6    &kp N7    &kp N8      &kp N9      &kp N0                              &kp MINUS   &kp EQUAL   &kp RBKT    &kp RBRC  &kp RPAR    &none
-                &none   &kp EXCL  &kp AT    &kp HASH    &kp DLLR    &kp PRCNT   &none       &none       &kp CARET   &kp AMPS    &kp STAR    &kp SEMI  &kp COLON   &none
+                &none   &none     &none     &none       &none       &none                               &none       &none       &none      &none      &none       &none
+                &none   &kp EXCL  &kp AT    &kp HASH    &kp DLLR    &kp PRCNT                           &kp CARET   &kp AMPS    &kp STAR   &kp SEMI   &kp COLON   &none
+                &none   &kp N1    &kp N2    &kp N3      &kp N4      &kp N5                              &kp MINUS   &kp EQUAL   &kp LBKT   &kp LBRC   &kp LPAR    &none
+                &none   &kp N6    &kp N7    &kp N8      &kp N9      &kp N0      &none       &none       &kp UNDER   &kp PLUS    &kp RBKT   &kp RBRC   &kp RPAR    &none
                                   &none     &none       &none       &none       &none       &kp PIPE    &mo 3       &kp BSLH    &none      &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
