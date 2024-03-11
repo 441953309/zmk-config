@@ -7,15 +7,15 @@
 
 &mt {
   flavor = "hold-preferred";
-  tapping-term-ms = <200>;
-  quick-tap-ms = <200>;
+  tapping-term-ms = <150>;
+  quick-tap-ms = <150>;
   // retro-tap;
 };
 
 &lt {  // layer-tap config
   flavor = "hold-preferred";
-  tapping-term-ms = <200>;
-  quick-tap-ms = <200>;
+  tapping-term-ms = <150>;
+  quick-tap-ms = <150>;
   // retro-tap;
 };
 
@@ -44,8 +44,8 @@
       #binding-cells = <2>;
       flavor = "tap-preferred";
       //retro-tap;
-      tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <200>;
+      tapping-term-ms = <150>;    // <---[[moderate duration]]
+      quick-tap-ms = <150>;
       require-prior-idle-ms = <125>;
       bindings = <&kp>, <&kp>;
     };
@@ -55,8 +55,8 @@
       #binding-cells = <2>;
       flavor = "tap-preferred";
       //retro-tap;
-      tapping-term-ms = <200>;    // <---[[moderate duration]]
-      quick-tap-ms = <200>;
+      tapping-term-ms = <150>;    // <---[[moderate duration]]
+      quick-tap-ms = <150>;
       require-prior-idle-ms = <125>;
       bindings = <&mo>, <&kp>;
     };
@@ -79,7 +79,7 @@
         &none     &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp C_PP        &none       &none       &none      &none       &none
         &none     &kp LGUI      &kp LALT      &kp LSHFT     &none           &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT   &none
         &none     &none         &kp F8        &kp F2        &kp F12         &none       &none       &none      &none       &none
-                                &kp LCTRL     &kp BSPC      &kp RET         &kp RET     &kp DEL     &kp RCTRL
+                                &kp LCTRL     &kp BSPC      &kp RET         &kp RET     &kp BSPC    &kp RCTRL
       >;
     };
 
@@ -88,7 +88,7 @@
         &kp EXCL  &kp AT    &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp SEMI  &kp COLON
         &kp N1    &kp N2    &kp N3      &kp N4      &kp N5          &kp MINUS   &kp EQUAL   &kp LBKT    &kp LBRC  &kp LPAR
         &kp N6    &kp N7    &kp N8      &kp N9      &kp N0          &kp UNDER   &kp PLUS    &kp RBKT    &kp RBRC  &kp RPAR
-                            &none       &none       &none           &kp PIPE    &mo 3       &kp BSLH
+                            &none       &none       &none           &none       &lt 3 DEL   &kp BSLH
       >;
     };
 
