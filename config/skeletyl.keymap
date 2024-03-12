@@ -7,15 +7,15 @@
 
 &mt {
   flavor = "hold-preferred";
-  tapping-term-ms = <150>;
-  quick-tap-ms = <150>;
+  tapping-term-ms = <175>;
+  quick-tap-ms = <175>;
   // retro-tap;
 };
 
 &lt {  // layer-tap config
   flavor = "hold-preferred";
-  tapping-term-ms = <150>;
-  quick-tap-ms = <150>;
+  tapping-term-ms = <175>;
+  quick-tap-ms = <175>;
   // retro-tap;
 };
 
@@ -44,8 +44,8 @@
       #binding-cells = <2>;
       flavor = "tap-preferred";
       //retro-tap;
-      tapping-term-ms = <150>;    // <---[[moderate duration]]
-      quick-tap-ms = <150>;
+      tapping-term-ms = <175>;    // <---[[moderate duration]]
+      quick-tap-ms = <175>;
       require-prior-idle-ms = <125>;
       bindings = <&kp>, <&kp>;
     };
@@ -55,8 +55,8 @@
       #binding-cells = <2>;
       flavor = "tap-preferred";
       //retro-tap;
-      tapping-term-ms = <150>;    // <---[[moderate duration]]
-      quick-tap-ms = <150>;
+      tapping-term-ms = <175>;    // <---[[moderate duration]]
+      quick-tap-ms = <175>;
       require-prior-idle-ms = <125>;
       bindings = <&mo>, <&kp>;
     };
