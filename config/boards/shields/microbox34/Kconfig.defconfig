@@ -1,7 +1,7 @@
-if SHIELD_MICROBOX34_LEFT
+if SHIELD_MICROBOX34_RIGHT
 
 config ZMK_KEYBOARD_NAME
-	default "Microbox34"
+	default "Microbox34_R"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
