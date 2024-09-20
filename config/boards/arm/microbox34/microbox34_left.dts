@@ -8,10 +8,6 @@
 #include "microbox34.dtsi"
 
 /{
-    chosen {
-        // zmk,battery = &vbatt;
-    };
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
@@ -34,9 +30,5 @@
             , <&gpio0 23 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&gpio1 9  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
-    };
-
-     vbatt: vbatt {
-        compatible = "zmk,battery-nrf-vddh";
     };
 };

@@ -18,8 +18,9 @@
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zmk,kscan = &kscan0;
-        zephyr,console = &cdc_acm_uart;
         zmk,matrix-transform = &default_transform;
+        // zephyr,console = &cdc_acm_uart;
+        // zmk,battery = &vbatt;
     };
     
     default_transform: keymap_transform_0 {
@@ -33,6 +34,10 @@
                                         RC(0,15) RC(0,16)  RC(0,33) RC(0,32)
         >;
     };
+
+    // vbatt: vbatt {
+    //     compatible = "zmk,battery-nrf-vddh";
+    // };
 };
 
 &adc {
