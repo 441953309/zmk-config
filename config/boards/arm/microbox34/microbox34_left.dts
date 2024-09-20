@@ -9,7 +9,7 @@
 
 /{
     chosen {
-        zmk,battery = &vbatt;
+        // zmk,battery = &vbatt;
     };
 
     kscan0: kscan {
