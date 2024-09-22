@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 #
 
-if BOARD_MICROBOX34_RIGHT
+if BOARD_MICROBOX34_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "Microbox34"
