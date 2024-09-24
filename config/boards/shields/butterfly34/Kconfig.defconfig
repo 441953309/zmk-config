@@ -1,0 +1,7 @@
+if SHIELD_BUTTERFLY34
+
+config ZMK_KEYBOARD_NAME
+	default "Butterfly34"
+	
+endif
+
