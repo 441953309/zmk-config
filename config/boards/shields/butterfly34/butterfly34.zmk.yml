@@ -7,5 +7,6 @@ requires:
   - pro_micro
 features:
   - keys
+  - underglow
 siblings:
   - butterfly34
