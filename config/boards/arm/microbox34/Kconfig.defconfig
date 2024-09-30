@@ -3,10 +3,10 @@
 # SPDX-License-Identifier: MIT
 #
 
-if BOARD_MICROBOX34_RIGHT
+if BOARD_MICROBOX34_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Microbox34_R"
+    default "Microbox34"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -25,15 +25,15 @@ config ZMK_SPLIT
 config BT_CTLR
     default BT
 
-if USB
+# if USB
 
-config USB_NRFX
-    default y
+# config USB_NRFX
+#     default y
 
-config USB_DEVICE_STACK
-    default y
+# config USB_DEVICE_STACK
+#     default y
 
-endif # USB
+# endif # USB
 
 endif # BOARD_MICROBOX34_LEFT || BOARD_MICROBOX34_RIGHT
 
