@@ -1,6 +1,7 @@
 // butterfly34.dtsi
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
