@@ -1,0 +1,5 @@
+config SHIELD_GAMEBOX58_LEFT
+    def_bool $(shields_list_contains,gamebox58_left)
+
+config SHIELD_GAMEBOX58_RIGHT
+    def_bool $(shields_list_contains,gamebox58_right)
