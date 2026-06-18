@@ -8,5 +8,6 @@ requires:
 features:
   - keys
   - underglow
+  - studio
 siblings:
   - butterfly34

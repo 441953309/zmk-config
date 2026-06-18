@@ -1,3 +1,10 @@
+/*
+ * Butterfly34 + Nice!Nano V2 (nice_nano//zmk) 专用 RGB 底灯配置
+ *
+ * 仅定义 WS2812 灯带的硬件连接（SPI3 / P0.06），与按键矩阵无关。
+ * 需在 butterfly34.conf 中启用 CONFIG_ZMK_RGB_UNDERGLOW=y 后才会生效。
+ * Zephyr 4.1 起须使用此文件名，旧名 nice_nano_v2.overlay 不会被加载。
+ */
 
 #include <dt-bindings/led/led.h>
 
