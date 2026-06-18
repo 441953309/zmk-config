@@ -75,7 +75,7 @@
     L1_layer {
       bindings = <
         &kp C_PP  &kp C_VOL_DN    &kp C_MUTE    &kp C_VOL_UP  &kp LS(TAB)     &kp HOME      &kp PG_DN   &kp PG_UP  &kp END     &none
-        &none     &tmt LGUI LCTRL &kp LALT      &kp LSHFT     &kp TAB         &kp LEFT      &kp DOWN    &kp UP     &kp RIGHT   &none
+        &none     &kp LGUI        &kp LALT      &kp LSHFT     &kp TAB         &kp LEFT      &kp DOWN    &kp UP     &kp RIGHT   &none
         &none     &none           &kp F8        &kp F2        &kp F12         &kp C_AL_CALC &kp C_PREV  &kp C_PP   &kp C_NEXT  &none
                                                 &kp BSPC      &kp RET         &kp RET       &kp DEL
       >;

@@ -1,6 +1,6 @@
 include:
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: butterfly34
-    snippet: zmk-usb-logging
-  - board: nice_nano
+    # snippet: zmk-usb-logging
+  - board: nice_nano//zmk
     shield: settings_reset
