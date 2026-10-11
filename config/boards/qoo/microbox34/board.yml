@@ -1,0 +1,13 @@
+boards:
+  - name: microbox34_left
+    vendor: qoo
+    socs:
+      - name: nrf52840
+        variants:
+          - name: zmk
+  - name: microbox34_right
+    vendor: qoo
+    socs:
+      - name: nrf52840
+        variants:
+          - name: zmk

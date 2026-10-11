@@ -1,0 +1,7 @@
+# HWMv2：选择 SoC，并启用 UF2 boot retention
+config BOARD_MICROBOX34_RIGHT
+	select SOC_NRF52840_QIAA
+	select ZMK_BOARD_COMPAT
+	imply RETAINED_MEM
+	imply RETENTION
+	imply RETENTION_BOOT_MODE

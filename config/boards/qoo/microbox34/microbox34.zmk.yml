@@ -1,0 +1,13 @@
+file_format: "1"
+id: microbox34
+name: Microbox34
+type: board
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+  - ble
+siblings:
+  - microbox34_left//zmk
+  - microbox34_right//zmk

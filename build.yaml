@@ -1,5 +1,5 @@
 include:
-  - board: microbox34_left
-  - board: microbox34_right
-  - board: nice_nano_v2
+  - board: microbox34_left//zmk
+  - board: microbox34_right//zmk
+  - board: nice_nano//zmk
     shield: settings_reset

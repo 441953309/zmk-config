@@ -1,0 +1,21 @@
+# 左半：主机名 + split central
+if BOARD_MICROBOX34_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Microbox34"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+endif # BOARD_MICROBOX34_LEFT
+
+# 左右半共用：启用分体与 BLE controller
+if BOARD_MICROBOX34_LEFT || BOARD_MICROBOX34_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+config BT_CTLR
+	default BT
+
+endif # BOARD_MICROBOX34_LEFT || BOARD_MICROBOX34_RIGHT
