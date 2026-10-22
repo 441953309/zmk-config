@@ -1,5 +1,64 @@
 on: [push, pull_request, workflow_dispatch]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  release:
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - name: Download firmware.zip
+        uses: actions/download-artifact@v8
+        with:
+          name: firmware
+          path: download
+          skip-decompress: true
+
+      - name: Rename to branch zip
+        run: |
+          set -euo pipefail
+          BRANCH="${GITHUB_REF_NAME}"
+          mkdir -p release
+          mv download/firmware.zip "release/${BRANCH}.zip"
+          ls -la release
+
+      - name: Upload to shared Firmware release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG="firmware"
+          BRANCH="${GITHUB_REF_NAME}"
+          SHA="${GITHUB_SHA}"
+
+          if ! gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$TAG" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "Firmware" \
+              --notes "所有键盘固件放在一起。每个分支一个 zip（文件名 = 分支名）。" \
+              --latest=false
+          fi
+
+          gh release upload "$TAG" "release/${BRANCH}.zip" \
+            --repo "$GITHUB_REPOSITORY" \
+            --clobber
+
+          {
+            echo "所有键盘固件放在一起。每个分支一个 zip（文件名 = 分支名）。"
+            echo
+            echo "最近更新：\`${BRANCH}\` @ \`${SHA:0:7}\`"
+            echo
+            echo "- 构建记录：${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          } > release-notes.md
+
+          gh release edit "$TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --notes-file release-notes.md
