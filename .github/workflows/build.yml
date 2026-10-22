@@ -1,6 +1,79 @@
 on: [push, pull_request, workflow_dispatch]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     # uses: 441953309/zmk_firmware/.github/workflows/build-user-config.yml@main
+
+  release:
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - name: Download firmware artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+
+      - name: Prepare release assets
+        run: |
+          set -euo pipefail
+          BRANCH="${GITHUB_REF_NAME}"
+          mkdir -p release
+          shopt -s nullglob
+          mains=()
+          for f in firmware/*.{uf2,hex,bin}; do
+            base=$(basename "$f")
+            ext="${base##*.}"
+            if [[ "$base" == *settings_reset* ]]; then
+              cp "$f" "release/settings_reset.${ext}"
+            else
+              mains+=("$f")
+            fi
+          done
+          n=${#mains[@]}
+          if [ "$n" -eq 0 ]; then
+            echo "No firmware files found" >&2
+            ls -laR firmware >&2 || true
+            exit 1
+          elif [ "$n" -eq 1 ]; then
+            ext="${mains[0]##*.}"
+            cp "${mains[0]}" "release/${BRANCH}.${ext}"
+          else
+            for f in "${mains[@]}"; do
+              base=$(basename "$f")
+              ext="${base##*.}"
+              if [[ "$base" == *left* ]]; then
+                side="left"
+              elif [[ "$base" == *right* ]]; then
+                side="right"
+              else
+                side="${base%.*}"
+              fi
+              cp "$f" "release/${BRANCH}-${side}.${ext}"
+            done
+          fi
+          echo "Release assets:"
+          ls -la release
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          target_commitish: ${{ github.sha }}
+          files: release/*
+          fail_on_unmatched_files: true
+          make_latest: false
+          body: |
+            Firmware for branch `${{ github.ref_name }}`.
+
+            - Commit: `${{ github.sha }}`
+            - Workflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
